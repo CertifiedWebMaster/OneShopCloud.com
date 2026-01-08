@@ -34,6 +34,10 @@ docker compose up -d
 
 For the full installation guide, please refer to our [Installation guide](https://evershop.io/docs/development/getting-started/installation-guide).
 
+## Deployment to OneShopCloud
+
+This repository is configured for deployment to [OneShopCloud](https://oneshopcloud.com). See the [Deployment Guide](./DEPLOYMENT.md) for detailed instructions on deploying to production.
+
 ## Documentation
 
 - [Installation guide](https://evershop.io/docs/development/getting-started/installation-guide).
