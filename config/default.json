@@ -11,8 +11,8 @@
       "host": "localhost",
       "port": 5432,
       "database": "evershop",
-      "user": "admin",
-      "password": "123456"
+      "user": "REPLACE_WITH_YOUR_DB_USER",
+      "password": "REPLACE_WITH_YOUR_DB_PASSWORD"
     }
   }
 }
