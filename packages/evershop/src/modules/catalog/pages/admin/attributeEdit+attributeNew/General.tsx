@@ -6,6 +6,7 @@ import React from 'react';
 import { useFormContext, Controller, useFieldArray } from 'react-hook-form';
 import Select from 'react-select';
 import { useQuery } from 'urql';
+import { v4 as uuidv4 } from 'uuid';
 import { get } from '../../../../../lib/util/get.js';
 import './General.scss';
 
@@ -182,7 +183,7 @@ const Options: React.FC<{
       option_id: (
         Math.floor(Math.random() * (9000000 - 1000000)) + 1000000
       ).toString(),
-      uuid: crypto.randomUUID()
+      uuid: uuidv4()
     });
   };
 
@@ -293,6 +294,7 @@ export default function General({ attribute, createGroupApi }: GeneralProps) {
                 label="Type"
                 defaultValue={attribute?.type}
                 required
+                disabled={!!attribute?.attributeId}
                 validation={{ required: 'Type is required' }}
               />
             </div>

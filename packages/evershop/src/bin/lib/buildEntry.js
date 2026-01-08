@@ -8,7 +8,7 @@ import { getComponentsByRoute } from '../../lib/componee/getComponentsByRoute.js
 import { CONSTANTS } from '../../lib/helpers.js';
 import { error } from '../../lib/log/logger.js';
 import { getRouteBuildPath } from '../../lib/webpack/getRouteBuildPath.js';
-import { generateComponentKey } from '../../lib/webpack/util/keyGenerator.js';
+import { generateComponentKey } from '../../lib/util/keyGenerator.js';
 import { parseGraphql } from '../../lib/webpack/util/parseGraphql.js';
 import { getEnabledWidgets } from '../../lib/widget/widgetManager.js';
 /**

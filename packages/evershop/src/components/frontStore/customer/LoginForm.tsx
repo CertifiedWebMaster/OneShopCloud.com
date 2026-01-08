@@ -56,7 +56,14 @@ export const CustomerLoginForm: React.FC<{
           method="POST"
           onSubmit={async (data) => {
             try {
-              await login(data.email, data.password, redirectUrl);
+              await login(
+                {
+                  email: data.email,
+                  password: data.password,
+                  ...data
+                },
+                redirectUrl
+              );
             } catch (error) {
               onError?.(error);
             }

@@ -2,9 +2,15 @@ import { error } from '../../../../lib/log/logger.js';
 import { setDelegate } from '../../../../lib/middleware/delegate.js';
 import { buildUrl } from '../../../../lib/router/buildUrl.js';
 import { INTERNAL_SERVER_ERROR, OK } from '../../../../lib/util/httpStatus.js';
+import { EvershopRequest } from '../../../../types/request.js';
+import { EvershopResponse } from '../../../../types/response.js';
 import createCustomer from '../../services/customer/createCustomer.js';
 
-export default async (request, response, next) => {
+export default async (
+  request: EvershopRequest,
+  response: EvershopResponse,
+  next
+) => {
   try {
     const customer = await createCustomer(request.body, {
       routeId: request.currentRoute.id

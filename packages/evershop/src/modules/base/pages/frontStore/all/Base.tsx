@@ -7,7 +7,7 @@ import {
 import {
   CustomerProvider,
   Customer
-} from '@components/frontStore/customer/CustomerContext.jsx';
+} from '@components/frontStore/customer/CustomerContext.js';
 import { Footer } from '@components/frontStore/Footer.js';
 import { Header } from '@components/frontStore/Header.js';
 import React from 'react';
@@ -48,6 +48,7 @@ export default function Base({
         <Header />
         <main className="content">
           <Area id="content" noOuter />
+          <div className="p-2 bg-primary">Just test tailwind</div>
         </main>
         <Footer copyRight={themeConfig.copyRight} />
       </CartProvider>

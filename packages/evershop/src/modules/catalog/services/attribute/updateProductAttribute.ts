@@ -49,7 +49,6 @@ async function updateAttributeOptions(
 ) {
   // Ignore updating options if it is not present in the data or if the attribute type is not select or multiselect
   if (
-    options.length === 0 ||
     !['select', 'multiselect'].includes(attributeType)
   ) {
     return;
@@ -62,7 +61,6 @@ async function updateAttributeOptions(
     .from('attribute_option')
     .where('attribute_id', '=', attributeId)
     .execute(connection, false);
-
   await Promise.all(
     oldOptions.map(async (oldOption) => {
       if (!ids.includes(parseInt(oldOption.attribute_option_id, 10))) {

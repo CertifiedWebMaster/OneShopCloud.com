@@ -6,7 +6,7 @@ import { getEnabledWidgets } from '../../../lib/widget/widgetManager.js';
 import { getAllRouteComponents } from '../../componee/getComponentsByRoute.js';
 import { error } from '../../log/logger.js';
 import { getRoutes } from '../../router/Router.js';
-import { generateComponentKey } from '../util/keyGenerator.js';
+import { generateComponentKey } from '../../util/keyGenerator.js';
 
 function buildComponentsPerRoute(components, imports) {
   const areas = {};

@@ -173,8 +173,8 @@ export const DefaultProductFilterRender: React.FC<{
         </div>
       )}
 
-      <div className={`hidden md:block product-filter ${className}`}>
-        <div className="filter-header flex items-center justify-between mb-4">
+      <div className={`hidden md:block product__filters ${className}`}>
+        <div className="product__filters__header flex items-center justify-between mb-4">
           {title && (
             <h3 className="font-bold text-lg flex items-center">
               {title}

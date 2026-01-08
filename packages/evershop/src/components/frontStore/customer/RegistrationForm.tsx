@@ -45,7 +45,8 @@ export const CustomerRegistrationForm: React.FC<{
                 {
                   full_name: data.full_name,
                   email: data.email,
-                  password: data.password
+                  password: data.password,
+                  ...data
                 },
                 true,
                 redirectUrl
